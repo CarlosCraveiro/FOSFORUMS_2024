@@ -5,9 +5,10 @@ mkShell {
     nixpkgs-fmt
     typst
     pdfpc
+    zathura
   ];
 
   shellHook = ''
-    # ...
+    zathura main.pdf&
   '';
 }
