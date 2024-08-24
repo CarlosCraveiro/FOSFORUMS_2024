@@ -114,7 +114,7 @@
 
     align(center + horizon)[
       #show math.equation: set text(35pt)
-      $k_B = 1.380650 dot 10^(23) J.K^(-1)$
+      $k_B = 1.380650 dot 10^(-23) J.K^(-1)$
     ], 
     
     figure(image("figs/ludwig_boltzmann.jpg", width: 40%)),
