@@ -140,12 +140,22 @@
 ]
 ]
 
+#slide(title: [#v(10pt)The Noisy Element], new-section: [Physics Behind])[
+  #figure(image("figs/resistor.jpg", width: 100%))
+]
+
 #slide(title: [#v(10pt)Thermal Noise], new-section: [Physics Behind])[
   #figure(image("figs/thermal_noise.png", width: 90%), caption:"https://www.nwengineeringllc.com/article/thermal-noise-in-communication-and-optical-systems.php")
 ]
 
-#slide(title: [#v(10pt)The Noisy Element], new-section: [Physics Behind])[
-  #figure(image("figs/resistor.jpg", width: 100%))
+#slide(title: [#v(10pt)Thermal Noise - PSD], new-section: [Physics Behind])[
+  #align(center + horizon)[
+  #show math.equation: set text(60pt)
+  #v(60pt)
+  #text(size: 70pt, "Power Spectral Density")
+  #v(30pt)
+  $S_n (omega)$
+]
 ]
 
 #slide(title: [#v(10pt)Thermal Noise Source], new-section: [Physics Behind])[
@@ -273,12 +283,30 @@
 ]
 
 #slide(title: [#v(10pt)Simulation], new-section: [KiCAD - Schematics])[
-  #text("Lorem Ipsum")
+   #align(left)[
+    #stack(
+      dir: ttb,
+      spacing: 60pt,
+      text(""),
+      text("• Verify the theoretical behaviour of the board"),
+      text("• KiCAD natively integrates simulation capabilitys"),
+      text(/*size: 28pt, weight: "bold",*/ "•  Uses NGSpice as the simulation engine"),
+      text("• Provides a variety of simulation types (DC Analysis, AC, Op, ...)"),
+    )
+  ] 
+]
+
+#focus-slide(background-img: image("figs/ac_simulation.png"))[
+  #text("")
 ]
 
 /*
 * KiCAD Layout
 * */
+
+#focus-slide(background-img: image("figs/kicad_layout_blank_canva.png"))[
+  #align(left)[#h(20pt)*Layout*]
+]
 
 #focus-slide(background-img: image("figs/kicad_layout_blank_canva.png"))[
   #text("")
@@ -320,7 +348,7 @@
 #align(left)[
     #stack(
       dir: ttb,
-      spacing: 60pt,
+      spacing: 70pt,
       text(""),
       text("• Python plugins (Automate tasks and Add new capabilities)"),
       text("• Content libraries (Shared 3rd party footprints, 3D models and symbols)"),
@@ -407,9 +435,9 @@
       spacing: 60pt,
       text(""),
       text("• Multi-project with KiCAD is terrible"),
-      text("• The simulation tool is too poor documentaded"),
-      text("• Could be more backwards compatible/portable"),
-      text("• Customization a bit too laborious (shortcuts)"),
+      text("• The simulation tool was poor documentaded (KiCAD 7)"),
+      text("• I couldn't simulate my circuit as I wanted"),
+      text("• Customization a bit too laborious (issues with shortcuts)"),
     )
   ]
   #align(right)[
@@ -446,7 +474,10 @@
       #text("• Setup a KicadStepUp Workbench")
       
       #text("at FreeCAD")
-
+      #v(20pt)
+      #text("• Make the simulation work")
+      #v(40pt)
+      #text("• Improve project's documentation")
     ], 
     
     figure(image("figs/ecad-mcad-collaboration.png", width: 40%)),
@@ -455,7 +486,10 @@
 ]
 
 #slide(title: [#v(10pt)References], new-section: [References])[
-  - TODO...
+  #v(20pt)
+  - 1 - Mishonov, T. M., Petkov, E. G., Stefanov, A. A., & Petkov, A. P. (2018). *Measurement of the Boltzmann constant by Einstein: Problem of the 5th Experimental Physics Olympiad* (Sofia, 9 December 2017). Retrieved from https://arxiv.org/pdf/1801.00022v3
+  #v(30pt)
+- 2 - Lathi, B. P., Ding, Z. (2009). Modern Digital and Analog Communication Systems. United Kingdom: Oxford University Press.
 ]
 
 #slide(title: [#v(10pt)Contact Information], new-section: [The End])[
